@@ -15,7 +15,7 @@ app.post('/analyzephoto', function(req, res) {
 	logoDetect(req.body.image, req.headers.host)
 		.then(function(result) {
 			console.log('logo detection finished');
-			console.log(result);
+			res.send(result);
 		});
 });
 

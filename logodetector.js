@@ -87,11 +87,6 @@ const LGRequest = function(base64, HOST_NAME) {
 						resolve([])
 					}
 		      		
-					setTimeout(function() {
-						// don't delete in dev env
-						if(process.env.NODE_ENV === 'development') return
-						fs.unlink(tmpPath, function() {/*console.log('tmp deleted')*/})
-					}, 20000);
 				})
 			});
 			// http.request(options, callback).end();

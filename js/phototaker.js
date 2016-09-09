@@ -136,12 +136,12 @@ function PhotoTaker(options) {
 				type: "POST",
 				data: { image: fixed },
 				url: "/analyzephoto",
-				success: function() {
-					console.log('success')
+				success: function(msg) {
+					alert(msg)
 				}
 			})
 			.done(function( msg ) {
-				console.log( "Data Saved: " + msg );
+				alert(msg)
 			});
 
 
