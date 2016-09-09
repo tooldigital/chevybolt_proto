@@ -133,12 +133,9 @@ function PhotoTaker(options) {
 			$.ajax({
 				type: "POST",
 				data: { image: fixed },
-				url: "/analyzephoto",
-				success: function success() {
-					console.log('success');
-				}
+				url: "/analyzephoto"
 			}).done(function (msg) {
-				console.log("Data Saved: " + msg);
+				alert(msg);
 			});
 		}
 	}

@@ -10,9 +10,13 @@ const LGRequest = function(base64, HOST_NAME) {
 		if (!fs.existsSync(rootDir)){
 		    fs.mkdirSync(rootDir);
 		}
+
+		base64 = base64.replace('data:image/jpeg;base64,', '');
+		base64 = base64.replace('data:image/png;base64,', '');
 		var fileName = 'tmp' + new Date().getTime() + '.jpg';
 		var tmpPath = rootDir + fileName;
-		var webPath = 'http://' + HOST_NAME + '/tmp/' + fileName;
+		// var webPath = 'http://' + HOST_NAME + '/tmp/' + fileName;
+		var webPath = 'http://' + HOST_NAME + "/" + fileName;
 
 		function saveTempImage() {
 			fs.writeFile(tmpPath, new Buffer(base64, "base64"), sendRequest);

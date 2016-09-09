@@ -135,10 +135,7 @@ function PhotoTaker(options) {
 			$.ajax({
 				type: "POST",
 				data: { image: fixed },
-				url: "/analyzephoto",
-				success: function(msg) {
-					alert(msg)
-				}
+				url: "/analyzephoto"
 			})
 			.done(function( msg ) {
 				alert(msg)
