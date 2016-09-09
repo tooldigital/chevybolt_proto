@@ -134,8 +134,8 @@ function PhotoTaker(options) {
 				type: "POST",
 				data: { image: fixed },
 				url: "/analyzephoto"
-			}).done(function (msg) {
-				alert(msg);
+			}).done(function (obj) {
+				alert(obj.name);
 			});
 		}
 	}

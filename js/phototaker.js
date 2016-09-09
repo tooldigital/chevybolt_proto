@@ -137,8 +137,8 @@ function PhotoTaker(options) {
 				data: { image: fixed },
 				url: "/analyzephoto"
 			})
-			.done(function( msg ) {
-				alert(msg)
+			.done(function( obj ) {
+				alert(obj.name)
 			});
 
 
