@@ -8,6 +8,7 @@ var app = express();
 
 app.set('view engine', 'pug');
 app.use(express.static('static'));
+app.use(express.static('tmp'));
 app.use(bodyParser.json({limit: '50mb'}))
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}))
 
