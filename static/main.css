@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	color: white;
+	font-family: sans-serif;
+
+
+}
+.app {
+	position:absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+img.header {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+}
+
+.cta {
+	position:relative;
+	margin-top: 40%;
+	width: 80%;
+	margin-left: 10%;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center
+}
+
+.take-photo {
+	position: relative;
+	margin-top: 10%;
+	width: 70%;
+	margin-left: 15%;
+	border: thin solid rgba(255,255,255, 0.5);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 21px;
+	padding: 15px;
+	letter-spacing: 2px;
+}
+input {
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}

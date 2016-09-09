@@ -1,11 +1,15 @@
+doctype html
 html
 	head
+		meta(name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
 	script(src="/index.js")
+	link(rel="stylesheet" href="/main.css")
 	body
-		.app
+		.app(style="background: url('images/bg.jpg') no-repeat center center; background-size: cover")
+			img.header(src="/images/header.jpg")
+			.cta Take photos of each of the provided images to test logo detection functionality
 			.take-photo
-				input(type='file' accept='image/*')
-			div(style="margin-top: 100px") -download these images then upload them with the above input
-			img(class="test1" src="images/att.png" width="400" style="display:block; margin: 30px; border: thin solid black")
-			img(class="test2" src="images/tmobile.png" width="400" style="display:block; margin: 30px; border: thin solid black")
+				.title take photo
 
+		
+			input(type='file' accept='image/*' placeholder="take-photo")

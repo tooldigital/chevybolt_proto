@@ -15,6 +15,10 @@ function PhotoTaker(options) {
 
 	var $btn = $(".app").find("button");
 	var $input = $(".app").find("input");
+	console.log($input);
+	$(".take-photo").on("click", function () {
+		$input.click();
+	});
 	$input.on("change", onImageInputChange);
 
 	function onImageInputChange(e) {
