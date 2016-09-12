@@ -9,6 +9,11 @@ function PhotoTaker(options) {
 		$input.click()
 	})
 	$input.on("change", onImageInputChange)
+	$(".close").on("click", handleClose)
+
+	function handleClose(e) {
+		$(e.currentTarget).closest(".vid").removeClass("show")
+	}
 
 	function onImageInputChange(e){
 		console.log('Landing.onImageInputChange', e)
@@ -142,7 +147,13 @@ function PhotoTaker(options) {
 				url: "/analyzephoto"
 			})
 			.done(function( obj ) {
-				alert(obj.name)
+				if(obj.name.toLowerCase && obj.name.toLowerCase === "at&t") {
+					$(".video1").addClass("show");
+					$(".video2").removeClass("show");
+				} else {
+					$(".video2").addClass("show");
+					$(".video1").removeClass("show");
+				}
 			});
 
 
