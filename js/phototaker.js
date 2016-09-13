@@ -148,10 +148,11 @@ function PhotoTaker(options) {
 				url: "/analyzephoto"
 			})
 			.done(function( obj ) {
-				if(obj.name && obj.name.toLowerCase === "at&t") {
+				console.log(obj)
+				if(obj.name && obj.name.toLowerCase() === "at&t") {
 					$(".video1").addClass("show");
 					$(".video2").removeClass("show");
-				} else if(obj.name && obj.name.toLowerCase === "at&t") {
+				} else if(obj.name && obj.name.toLowerCase() === "t-mobile") {
 					$(".video2").addClass("show");
 					$(".video1").removeClass("show");
 				}
