@@ -70,6 +70,10 @@ input {
 	display: block;
 }
 
+.vid {
+	background: black;
+}
+
 .loading {
 	position: absolute;
 	top: 0;
