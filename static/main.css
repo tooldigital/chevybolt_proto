@@ -69,3 +69,27 @@ input {
 .video1.show, .video2.show {
 	display: block;
 }
+
+.loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	display: none;
+}
+
+.loading.show {
+	display: block
+}
+
+.loading svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+

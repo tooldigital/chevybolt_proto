@@ -141,19 +141,21 @@ function PhotoTaker(options) {
 
 			var fixed = resizeCanvas.toDataURL();
 			console.log("about to post image")
+			$(".loading").addClass("show")
 			$.ajax({
 				type: "POST",
 				data: { image: fixed },
 				url: "/analyzephoto"
 			})
 			.done(function( obj ) {
-				if(obj.name.toLowerCase && obj.name.toLowerCase === "at&t") {
+				if(obj.name && obj.name.toLowerCase === "at&t") {
 					$(".video1").addClass("show");
 					$(".video2").removeClass("show");
-				} else {
+				} else if(obj.name && obj.name.toLowerCase === "at&t") {
 					$(".video2").addClass("show");
 					$(".video1").removeClass("show");
 				}
+				$(".loading").removeClass("show")
 			});
 
 
