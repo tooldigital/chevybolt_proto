@@ -63,7 +63,7 @@ const LGRequest = function(base64, HOST_NAME) {
 
 				      		var tmp = [];
 				      		resp.data.detections.forEach(function(item) {
-				      			if( item.validationFlags[0] > .1 && item.validated === 1 ) {
+				      			if( item.validated === 1 ) {
 				      				tmp.push(item);
 				      			}
 				      		})
